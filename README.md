@@ -1,3 +1,36 @@
+## Setup Instructions
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/chaitraask-013/AI-Resume-Analyzer.git
+```
+
+2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Get a Groq API Key
+
+4. Open `app.py`
+
+Replace:
+
+```python
+GROQ_API_KEY = "YOUR_GROQ_API_KEY"
+```
+
+with your own Groq API Key.
+
+5. Run the application
+
+```bash
+streamlit run app.py
+```
+
+
 # AI Resume Analyzer
 
 An AI-powered Resume Analyzer built using Python, Streamlit, PyPDF2, Groq API, and Llama 3.3.
