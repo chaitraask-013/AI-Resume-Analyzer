@@ -7,14 +7,18 @@ GROQ_API_KEY = "YOUR_GROQ_API_KEY"
 
 client = Groq(api_key=GROQ_API_KEY)
 
+
 st.title("📄 AI Resume Analyzer")
 
 st.write("Upload your resume and get AI-powered feedback!")
+
+
 
 uploaded_file = st.file_uploader(
     "Choose your Resume",
     type=["pdf"]
 )
+
 
 
 if uploaded_file:
@@ -35,6 +39,7 @@ if uploaded_file:
     st.subheader("📃 Extracted Resume Text")
 
     st.text(text)
+
 
     if st.button("Analyze Resume"):
 
@@ -68,8 +73,9 @@ Resume:
 
             analysis = response.choices[0].message.content
 
-            st.subheader(" AI Analysis")
+            st.subheader("AI Analysis")
 
+            # Demo Progress Bar
             st.progress(85)
 
             st.write(analysis)
